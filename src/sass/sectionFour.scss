@@ -1,0 +1,84 @@
+// section specific styles
+.section-4 {
+    background-color: #e9ebf0;
+    margin-top: 50px;
+    height: 980px;
+    padding: 25px;
+
+    // styles for the section header
+    &-header-heading {
+        text-align: center;
+        font-size: 48px;
+        color: fetchShadeOfBlue(navy-blue);
+
+    }
+
+    // styles for the links in this section
+    &-links {
+        @include gridCreation(repeat(5, 0.13fr), null, null);
+        @include positionRelatively(-14px, 321px);
+        justify-items: center;
+
+        .links {
+            font-size: 25px;
+            margin: 37px;
+            color: #000000;
+            text-decoration: none;
+            font-family: $font-family;
+
+            &:hover {
+                @include transitionHoverColor(0.2s);
+                color: fetchShadeOfBlue(light-blue);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // container that includes the plan image and its description
+    .plan-div {
+        @include borderCreator(1px solid #ebebeb, 20px, fetchShadeOfBlue(""));
+        @include resize(1692px, 701px);
+        margin: auto;
+
+        .plan-image {
+            @include resize(558px, 549px);
+            @include positionRelatively(80px, -185px);
+            float: right;
+        }
+
+        // styles for the plan description
+        .plan-description {
+            @include resize(590px, 550px);
+            margin: 50px;
+            background-color: #186AA5;
+            color: fetchShadeOfBlue("");
+            padding: 25px;
+            line-height: 30px;
+            border: 1px solid transparent;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        dt {
+            @include positionRelatively(null, 35px);
+            font-size: 33px;
+            font-family: $font-family;
+            font-weight: bold;
+            padding: 25px;
+
+        }
+
+        dd {
+            @include positionRelatively(null, 19px);
+            font-size: 14px;
+            font-family: $font-family;
+        }
+
+        .area-values {
+            @include positionRelatively(null, 19px);
+            font-size: 16px;
+            margin: 40px;
+            font-family: $font-family;
+        }
+    }
+}

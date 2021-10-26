@@ -1,0 +1,70 @@
+// section specific style
+.section-2 {
+    margin-top: -373px;
+
+    // style for the section header
+    &-header {
+        text-align: center;
+
+        &-heading {
+            font-size: 48px;
+            color: fetchShadeOfBlue(navy-blue);
+
+            &-span {
+                color: fetchShadeOfBlue(dark-blue);
+            }
+        }
+
+        // style for the section subheading
+        &-subheading {
+            font-size: 24px;
+            color: #8D9598;
+            font-weight: 1px;
+            font-family: $font-family;
+        }
+    }
+
+    // style for the form in this section
+    &-form {
+        @include positionRelatively(0px, 133px);
+
+        &-field {
+            border: none;
+
+            &-div {
+                @include gridCreation(repeat(4, 0.1fr), 25px, null);
+                text-align: center;
+
+                .radio-img {
+                    @include resize(285px, 212px);
+                    @include borderCreator(10px solid fetchShadeOfBlue(""), 20px, fetchShadeOfBlue(""));
+                    padding: 30px;
+                    padding-bottom: 68px;
+                }
+
+                .pic-description {
+                    @include positionRelatively(-84px, null);
+                    text-align: center;
+                    color: #8D9598;
+                    font-family: $font-family;
+                    font-size: 24px;
+                    z-index: 4;
+                }
+            }
+        }
+
+        // style for the continue button
+        .continue-button {
+            @extend .dark-blue-button;
+            @include resize(591px, 96px);
+            @include positionRelatively(51px, 490px);
+            padding: 25px;
+
+            &:hover {
+                @include transitionHoverColor(0.2s);
+                cursor: pointer;
+                background-color: fetchShadeOfBlue(very-dark-blue);
+            }
+        }
+    }
+}

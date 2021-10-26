@@ -1,0 +1,35 @@
+// style for the sections
+@for $section-padding from 1 to 5 {
+    .section-#{$section-padding} {
+        padding: 10px;
+    }
+}
+
+// style for creating a light blue button
+.light-blue-button {
+    @include borderCreator(1px solid map-get($shades-of-blue, light-blue), 10px, map-get($shades-of-blue, light-blue));
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+// style for creating a dark blue button
+.dark-blue-button {
+    @include borderCreator(1px solid map-get($shades-of-blue, form-blue), 10px, map-get($shades-of-blue, form-blue));
+    border-color: #186AA5;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+// styles for the radio buttons
+input[type="radio"] {
+    display: none;
+}
+
+input[type=radio]:checked+label>img {
+    @include transitionHoverColor(0.1s);
+    background-image: url("/images/orangeTick.png");
+    background-repeat: no-repeat;
+    background-size: 45px;
+    background-position: 290px 255px;
+    z-index: 1000;
+}

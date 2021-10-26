@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head element -->
+
+<head>
+    <!-- title of the HTML page -->
+    <title>Home Page</title>
+
+    <!-- character encoding of the document -->
+    <meta charset="UTF-8">
+
+    <!-- add stles -->
+    <link rel="stylesheet" href="dist/main.css">
+</head>
+
+
+<!-- Main body of the webpage -->
+
+<body>
+    <!-- Header of the webpage structure -->
+    <header class="header">
+        <!-- Clickable logo so that the user can return to the home page -->
+        <input class="header-logo" type="image" src="images/Group 9739.png">
+
+        <div class="header-links">
+            <!-- Navigation pages or anchor links to navigate to the respective page -->
+            <a class="individual-link" href="index.html">Home</a>
+            <a class="individual-link" href="index.html">About</a>
+            <a class="individual-link" href="index.html">Featured</a>
+            <a class="individual-link" href="index.html">Contact</a>
+        </div>
+
+        <div class="header-text-buttons">
+            <!-- Search option to search the user entered data -->
+            <input class="search-bar" type="search" placeholder="Saved Search">
+
+
+            <!-- User can check the notifications here -->
+            <input class="notification-image" type="image" src="images/NotificationIcon.png" value="Notification">
+
+            <!-- Login button -->
+            <input class="light-blue-button header-login-button" type="button" name="Login" value="Login">
+        </div>
+    </header>
+
+    <!-- *********************************************************************************************** -->
+    <!-- *********************************************************************************************** -->
+
+    <!-- SectionOne begins -->
+    <!-- SectionOne of the page with buying/selling/renting options and a search filter -->
+    <section class="section-1">
+
+        <div class="section-1-head-title">
+            <!-- Header section-->
+            <header>
+                <h2 class="section-1-head-title-heading">Let&rsquo;s find<br><span
+                        class="section-1-head-title-heading-span">yours Dream..</span></h2>
+            </header>
+            <h3 class="section-1-head-title-subheading">Building award winning properties across London<br>UK and the
+                All
+                world
+            </h3>
+        </div>
+
+        <!-- Embedded Images in this section -->
+        <div class="section-1-image-div">
+            <img class="actual-image" src="images/pierre-chatel-innocenti-gxyeia7Syuk-unsplash.png"
+                alt="SectionOne Image">
+        </div>
+        <!-- Links section -->
+        <!-- Navigate to a different view for Buying, Selling or Renting -->
+
+        <div class="section-1-form-links">
+            <a class="section-1-form-links-a" href="index.html">Buy</a>
+            <a class="section-1-form-links-a" href="index.html">Sell</a>
+            <a class="section-1-form-links-a" href="index.html">Rent</a>
+        </div>
+        <div class="section-1-form">
+            <!-- Form section -->
+            <!-- Form for searching an apartment based on the input arguments -->
+            <!-- Used GET method since POST is not being supported as of now -->
+            <form class="section-1-form-div" action="index.html" method="GET">
+                <fieldset class="section-1-form-fieldset">
+                    <!-- City or street filter -->
+                    <div class="section-1-form-fieldset-fields">
+                        <div class="label-divs">
+                            <label>City/Street
+                                <input class="fields-city" type="text" name="City/Street" placeholder="Enter City"
+                                    required>
+                            </label>
+                        </div>
+                        <div class="label-divs">
+                            <!-- Filter the apartment type. -->
+                            <label>Apartment Type
+                                <select class="form-select" name="apartment type" required="required">
+
+                                    <!-- Default value which is disabled -->
+                                    <option value="" disabled="disabled" selected>Select an apartment type</option>
+
+                                    <option value="DEL">DELUXE PORTION</option>
+                                    <option value="DBLH">DOUBLE HEIGHT</option>
+                                    <option value="PENT">PENTHOUSE</option>
+                                    <option value="STD">THE STUDIO</option>
+                                </select>
+                            </label>
+                        </div>
+
+
+                        <div class="label-divs">
+                            <label>Price Range
+                                <select class="form-select-1" name="Price Range" required="required">
+                                    <!-- Default value which is disabled -->
+                                    <option value="" disabled="disabled" selected>Min Price - Max Price</option>
+
+                                    <option value="1000To1500">$1000 - $1500</option>
+                                    <option value="1500To2000">$1500 - $2000</option>
+                                    <option value="2000To2500">$2000 - $2500</option>
+                                    <option value="2500Plus">&gt; $2500</option>
+                                </select>
+                            </label>
+                        </div>
+
+
+                        <button class="advanced-filter-link">+ Advanced Filter</button>
+                        <button class="sumbit-button" type="submit">Search</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <!-- SectionOne ends -->
+
+    <!-- *********************************************************************************************** -->
+    <!-- *********************************************************************************************** -->
+
+    <!-- SectionTwo begins -->
+    <!-- SectionTwo of the page where the user can select the apartment type of their choice -->
+    <section class="section-2">
+
+        <!-- Header section -->
+        <header class="section-2-header">
+            <h2 class="section-2-header-heading">HI, What do you want to your<br><span
+                    class="section-2-header-heading-span">Dream
+                    Apartment</span></h2>
+            <p class="section-2-header-subheading">Select a Apartment type below to begins</p>
+        </header>
+
+        <!-- Form section -->
+        <!-- Used GET method since POST is not being supported as of now -->
+        <form action="index.html" method="GET">
+            <!-- Select the type of apartment type from the thumbnails -->
+            <div class="section-2-form">
+                <fieldset class="section-2-form-field">
+                    <div class="section-2-form-field-div">
+                        <div>
+                            <input type="radio" id="1" name="Types" value="DeluxePortion">
+                            <label for="1">
+                                <img class="radio-img" type="radio" src="images/DeluxePortion.png">
+                                <p class="pic-description">Deluxe Portion</p>
+                            </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="2" name="Types" value="DoubleHeight">
+                            <label for="2">
+                                <img class="radio-img" src="images/DoubleHeight.png">
+                                <p class="pic-description">Double Height</p>
+                            </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="3" name="Types" value="Penthouse">
+                            <label for="3">
+                                <img class="radio-img" src="images/Penthouse.png">
+                                <p class="pic-description">Penthouse</p>
+                            </label>
+
+                        </div>
+                        <div>
+                            <input type="radio" id="4" name="Types" value="TheStudio">
+                            <label for="4">
+                                <img class="radio-img" src="images/TheStudio.png">
+                                <p class="pic-description">The Studio</p>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Click the submit button after selecting the apartment type -->
+                    <button class="continue-button" type="submit">Continue</button>
+                </fieldset>
+            </div>
+        </form>
+    </section>
+    <!-- SectionTwo ends -->
+
+    <!-- *********************************************************************************************** -->
+    <!-- *********************************************************************************************** -->
+
+    <!-- SectionThree begins -->
+    <!-- SectionThree of the page where the featured apartments are displayed -->
+    <section class="section-3">
+
+        <!-- Header section -->
+        <header>
+            <h2 class="section-3-header-heading">Featured Apartment</h2>
+            <p class="section-3-header-subheading">The Most frequently searched and most popular apartment of the
+                application
+                will be in the list</p>
+        </header>
+
+        <div class="section-3-media">
+
+            <!-- Featured apartment one -->
+            <div class="card">
+                <input class="card-container" type="image" src="images/featured1.png" value="FA1">
+                <div class="card-text">
+                    <p class="card-name">Knightsbridge</p>
+                    <p class="card-price">$2,500</p>
+                    <p class="card-apartment-name">Apartment London</p>
+                    <p class="card-description">Beautiful Huge 1 Family House In Heart Of Westbury Newly<br>Renovated
+                        With New
+                        Furniture</p>
+
+                    <div class="sub-card">
+                        <div class="sub-card-desc">
+                            <p class="bedrooms">2</p>
+                            <p class="bedroom-desc">Bedrooms</p>
+                        </div>
+                        <div class="sub-card-desc">
+                            <p class="bathrooms">2</p>
+                            <p class="bathroom-desc">Bathrooms</p>
+                        </div>
+                        <div class="sub-card-desc">
+                            <p class="area">1776</p>
+                            <p class="area-desc">Square Ft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- featured apartment two -->
+            <div class="card">
+                <input class="card-container" type="image" src="images/featured2.png" value="FA1">
+                <div class="card-text">
+                    <p class="card-name">Belmont Gardens, Chicago</p>
+                    <p class="card-price">$30000</p>
+                    <p class="card-apartment-name">Studio Apartment</p>
+                    <p class="card-description">Beautiful Huge 1 Family House In Heart Of Westbury Newly<br>Renovated
+                        With New
+                        Furniture</p>
+
+                    <div class="sub-card">
+                        <div class="sub-card-desc">
+                            <p class="bedrooms">3</p>
+                            <p class="bedroom-desc">Bedrooms</p>
+                        </div>
+                        <div class="sub-card-desc">
+                            <p class="bathrooms">2</p>
+                            <p class="bathroom-desc">Bathrooms</p>
+                        </div>
+                        <div class="sub-card-desc">
+                            <p class="area">2500</p>
+                            <p class="area-desc">Square Ft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- featured apartment 3 -->
+            <div class="card">
+                <input class="card-container" type="image" src="images/featured3.png" value="FA1">
+                <div class="card-text">
+                    <p class="card-name">Timber Yard, Brimingham City Center, B5</p>
+                    <p class="card-price">$379,000</p>
+                    <p class="card-apartment-name">Galliard Homes Apartment</p>
+                    <p class="card-description">Beautiful Huge 1 Family House In Heart Of Westbury Newly<br>Renovated
+                        With New
+                        Furniture</p>
+
+                    <div class="sub-card">
+                        <div class="sub-card-desc">
+                            <p class="bedrooms">2</p>
+                            <p class="bedroom-desc">Bedrooms</p>
+                        </div>
+                        <div class="sub-card-desc">
+                            <p class="bathrooms">1</p>
+                            <p class="bathroom-desc">Bathrooms</p>
+                        </div>
+                        <div class="sub-card-desc">
+                            <p class="area">1041</p>
+                            <p class="area-desc">Square Ft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SVG used to make three dots as shown in the sample webpage -->
+        <div class="svg-element">
+            <svg width="30" height="30" viewbox="0 0 50 50">
+                <circle cx="30" cy="35" r="10.5" stroke="lightgrey" fill="lightgrey" />
+            </svg>
+            <svg width="25" height="30" viewbox="0 0 50 50">
+                <circle cx="20" cy="36.9" r="13" stroke="#2289FF" fill="#2289FF" />
+            </svg>
+            <svg width="25" height="30" viewbox="0 0 50 50">
+                <circle cx="14" cy="36.9" r="13" stroke="lightgrey" fill="lightgrey" />
+            </svg>
+        </div>
+
+    </section>
+    <!-- SectionThree ends -->
+
+    <!-- *********************************************************************************************** -->
+    <!-- *********************************************************************************************** -->
+
+    <!-- SectionFour begins -->
+    <!-- SectionFour of the page where the apartment plans -->
+    <section class="section-4">
+
+        <!-- Header section -->
+        <header>
+            <h1 class="section-4-header-heading">Apartment Plans</h1>
+        </header>
+
+        <!-- Plan selection section of this article -->
+        <!-- Radio buttons from veiwing the preferred apartment types -->
+        <div class="section-4-links">
+            <a class="links" href="index.html">The Studio</a>
+            <a class="links SecFourUnFocusedButton" href="index.html">Deluxe Portion</a>
+            <a class="links SecFourUnFocusedButton" href="index.html">Penthouse</a>
+            <a class="links SecFourUnFocusedButton" href="index.html">Top Garden</a>
+            <a class="links SecFourUnFocusedButton" href="index.html">Double Height</a>
+        </div>
+
+        <!-- Apartment plans and descriptions -->
+        <div class="plan-div">
+            <img class="plan-image" src="images/Image 6.png">
+
+            <div class="plan-description">
+                <dl>
+                    <dt>Deluxe Portion</dt>
+                    <dd>Boasting chick interiors, three private balconies and a remarkable terrace,<br>this two bedroom
+                        apartment will epitomise complete luxury. Not only will<br>residents benefit from a superb
+                        location
+                        in
+                        the heart of Shoreditch, but<br>they will also enjoy unrivalled facilities and a 24-hour bespoke
+                        concierge.</dd>
+                </dl>
+
+                <!-- Apartment room areas -->
+                <div class="area-values">
+                    <p>Total Area ............................................2800 Sq. Ft</p>
+                    <p>Bedroom ..............................................2800 Sq. Ft</p>
+                    <p>Bathroom .............................................2800 Sq. Ft</p>
+                    <p>Smoking/ pets ......................................2800 Sq. Ft</p>
+                    <p>Lounge ................................................2800 Sq. Ft</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- SectionFour ends -->
+
+    <!-- *********************************************************************************************** -->
+    <!-- *********************************************************************************************** -->
+
+    <!-- SectionFive begins -->
+    <!-- SectionFive of the page where you can view all the apartments -->
+    <section class="section-5">
+
+        <!-- Header section -->
+        <div class="section-5-container">
+            <header>
+                <h2 class="section-5-header-heading">Buy<br>Dream Apartment<br>In <span
+                        class="section-5-header-heading-span">Prime
+                        Location</span>
+                </h2>
+            </header>
+
+            <!-- Section with the button to view all the apartments -->
+            <input class="see-apartment-button" type="button" name="SeeApartments" value="See All Apartment">
+        </div>
+
+        <!-- Section with all the embedded medias -->
+        <figure class="embedded-media">
+            <video class="video" src="images/delux2.png" poster="images/delux2.png" type="video/mp4"></video>
+            <picture>
+                <img class="image" src="images/THE-SELECT-TEN----Bedroom-Apartment---Wintergarden-(Floor-33-34).png">
+                <img class="image-dots" src="images/Union 2.png">
+            </picture>
+        </figure>
+        <input class="play-button" type="image" src="images/Group 9722.png" value="PLAY">
+    </section>
+    <!-- SectionFive ends -->
+
+    <!-- Footer of the webpage structure -->
+    <footer>
+        <div class="footer">
+
+            <div class="footer-logo">
+                <!-- Clickable logo so that the user can return to the home page -->
+                <input class="footer-logo-img" type="image" src="images/Group 9739.png">
+                <p class="footer-logo-text">The most beautiful exclusive<br>properties and luxury apartments</p>
+            </div>
+
+            <!-- Useful links - anchor elements -->
+            <!-- <div class="Fonts HelpfulLinks"> -->
+            <div class="links-containter-1">
+                <h4 class="links-header">Useful Links</h4>
+                <div class="UsefulLinks">
+                    <a class="links-actual" href="index.html">About</a><br>
+                    <a class="links-actual" href="index.html">Partners</a><br>
+                    <a class="links-actual" href="index.html">Contact</a>
+                </div>
+            </div>
+
+            <!-- Help - anchor elements -->
+            <div class="links-containter-2">
+                <h4 class="links-header">Help?</h4>
+                <div class="HelpLinks">
+                    <a class="links-actual" href="index.html">FAQ</a><br>
+                    <a class="links-actual" href="index.html">Terms & Condition</a><br>
+                    <a class="links-actual" href="index.html">Policy</a><br>
+                    <a class="links-actual" href="index.html">Privacy</a>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <!-- Social media icon buttons -->
+            <div class="social-media">
+                <input class="social-media-button" type="image" src="images/Group 9740.png" value="FB">
+                <input class="social-media-button" type="image" src="images/Group 9741.png" value="TWEET">
+                <input class="social-media-button" type="image" src="images/Group 9742.png" value="INSTA">
+                <input class="social-media-button" type="image" src="images/Group 9743.png" value="TELE">
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="copyright-text">&copy; Copyright 2021, morden.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>

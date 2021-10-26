@@ -1,0 +1,59 @@
+// section specific style attributes
+.section-5 {
+    height: 850px;
+
+    // section heading styles
+    &-header-heading {
+        font-size: 60px;
+        color: fetchShadeOfBlue(navy-blue);
+        line-height: 100px;
+
+        &-span {
+            color: fetchShadeOfBlue(light-blue);
+        }
+    }
+
+    // style for the see all apartment button
+    .see-apartment-button {
+        @extend .dark-blue-button;
+        @include resize(382px, 108px);
+
+        &:hover {
+            @include buttonHover("dark-blue");
+        }
+    }
+
+    // containter includes all the media images and videos
+    &-container {
+        @include positionRelatively(181px, 90px);
+    }
+
+    // style for the main image in this section
+    .image {
+        @include resize(1062px, 791px);
+        @include positionRelatively(-416px, 175px);
+        z-index: 6;
+    }
+
+    // style for the main video in this section
+    .video {
+        @include resize(534px, 356px);
+        @include positionRelatively(-487px, 581px);
+        border-radius: 50px;
+        z-index: 7;
+    }
+    
+    // style for the abstract dots image which is used as the backdrop
+    .image-dots {
+        @include resize(296px, 296px);
+        @include positionRelatively(-1230px, 702px);
+    }
+
+    // style for the cutom play button
+    .play-button {
+        @include resize(115px, 115px);
+        @include positionRelatively(-1041px, 823px);
+        z-index: 7;
+    }
+    
+}

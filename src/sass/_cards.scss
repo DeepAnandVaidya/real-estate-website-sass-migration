@@ -1,0 +1,109 @@
+.card {
+    @include resize(401px, 445px);
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: 0.01em 0 1em 0.0001px #e8e8e8;
+
+    &-container {
+        width: 375px;
+        display: block;
+        margin: auto;
+        padding-top: 13px;
+        border-radius: 30px;
+    }
+
+    &-text {
+        padding: 10px;
+        margin-bottom: 0px;
+        background-image: url("/images/card-1.png"), url("/images/card-2.png"), url("/images/card-3.png");
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: 287px 161px, 322px 161px, 357px 161px;
+
+        .card-name {
+            height:25px;
+            font-size: 17px;
+            color: grey;
+            font-family: sans-serif;
+            background-image: url("/images/location.png");
+            background-repeat: no-repeat;
+            background-position: 5px;
+            padding-left: 30px;
+            margin: 4px;
+            text-align: left;
+        }
+
+        .card-price {
+            font-size: 25px;
+            color: #1E62E8;
+            font-family: $font-family;
+            font-weight: bold;
+            padding-left: 25px;
+            margin: 4px;
+            text-align: left;
+        }
+
+        .card-apartment-name {
+            font-size: 22px;
+            padding-left: 25px;
+            margin: 4px;
+            text-align: left;
+            font-family: $font-family;
+            font-weight: bold;
+        }
+
+        .card-description {
+            font-size: 11px;
+            font-family: $font-family;
+            padding-left: 30px;
+            color: darkgray;
+            text-align: left;
+        }
+
+        .sub-card {
+            @include positionRelatively(null, 27px);
+            @include borderCreator(1px solid #E0E7F2, null, #E0E7F2);
+            width: 210px;
+            display: flex;
+            font-size: 11px;
+            padding-left: 25px;
+            text-align: center;
+
+            &-desc {
+                padding-right: 15px;
+                font-family: $font-family;
+                color: darkgray;
+
+                .bedrooms {
+                    background-image: url(/images/bed.png);
+                    background-repeat: no-repeat;
+                    background-position: 15px;
+                    padding-right: 40px;
+                    color: #1E62E8;
+                    font-family: $font-family;
+                    font-weight: bold;
+                }
+                
+                .bathrooms {
+                    background-image: url(/images/bath.png);
+                    background-repeat: no-repeat;
+                    background-position: 15px -3px;
+                    padding-right: 40px;
+                    color: #1E62E8;
+                    font-family: $font-family;
+                    font-weight: bold;
+                }
+                
+                .area {
+                    background-image: url(/images/area.png);
+                    background-repeat: no-repeat;
+                    background-position: 29px;
+                    padding-right: 20px;
+                    background-size: 15px;
+                    color: #1E62E8;
+                    font-family: $font-family;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

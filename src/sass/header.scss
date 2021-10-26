@@ -1,0 +1,95 @@
+@import 'variables';
+@import 'mixin';
+
+// html element attributes
+html {
+    background-color: $page-backgrounud-color;
+    zoom: 80%;
+    overflow-x: hidden;
+
+    // body element attributes
+    body {
+        display: grid;
+        grid-template-rows: repeat(6, 0.1fr);
+        min-height: 100vh;
+        // main header parent
+        .header {
+
+            // header is fixed so that it does not move when the page is scrolled
+            @include gridCreation(1fr 2fr 1.5fr, 1em, minmax(127px, auto));
+            align-items: center;
+            position: fixed;
+            z-index: 10;
+            background-color: $page-backgrounud-color;
+            width: 100%;
+            top: 0;
+            left: 0;
+
+            // logo class in the 'header' element
+            &-logo {
+                @include resize(287px, 78px);
+                @include positionRelatively(null, 51px);
+
+            }
+
+            // anchor links div in the header parent
+            .header-links {
+                @include gridCreation(repeat(4, 1fr), 55px, null);
+                @include resize(52px, 16px);
+                @include positionRelatively(5px, 98px);
+                font-size: 20px;
+
+                // individual anchor links in the div
+                .individual-link {
+                    text-decoration: none;
+                    color: #14395B;
+                    font-family: $font-family;
+                    @include transitionHoverColor(0.3s);
+
+                    // add a hover property using '&' which denotes the parent
+                    &:hover {
+                        color: $hover-color-lightblue;
+                    }
+                }
+            }
+
+            // text fields and button div in the header parent
+            .header-text-buttons {
+                @include gridCreation(1fr 0.3fr 1fr, 45px, null);
+                justify-self: center;
+
+                // search bar in the "text-buttons" div
+                .search-bar {
+                    @include resize(189px, 46px);
+                    @include positionRelatively(8px, -17px);
+                    @include borderCreator(1px dashed #707070, 20px, null);
+                    font-size: 20px;
+                    padding-left: 35px;
+                    background-image: url('/images/searchIcon.png');
+                    background-repeat: no-repeat;
+                    background-position: 10px;
+                    align-self: center;
+                }
+            }
+
+            // Notifications icon in the "text-buttons" div
+            .notification-image {
+                @include resize(65px, 62px);
+                @include positionRelatively(6px, -28px);
+            }
+
+            // login button
+            &-login-button {
+                @include positionRelatively(10px, -21px);
+                @extend .light-blue-button;
+                @include resize(179px, 58px);
+
+                &:hover {
+                    @include transitionHoverColor(0.2s);
+                    background-color: map-get($button-hover-colors, light-blue);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

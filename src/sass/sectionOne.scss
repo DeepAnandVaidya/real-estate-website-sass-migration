@@ -1,0 +1,157 @@
+@import 'functions';
+
+// styles for this section
+.section-1 {
+    &-head-title {
+        @include borderCreator(1px solid transparent, 90px, fetchShadeOfBlue(""));
+        @include resize(984px, 400px);
+        @include positionRelatively(222px, 51px);
+        box-shadow: 0.01em 0 1em 0.0001px #9a9a9a;
+        margin-left: -245px;
+        z-index: 1;
+
+        // style for the heading in this section
+        &-heading {
+            font-size: 88px;
+            color: fetchShadeOfBlue(light-blue);
+            @include positionRelatively(-1px, 271px);
+
+            &-span {
+                color: map-get($shades-of-blue, dark-blue);
+            }
+        }
+
+        // style for subheading in this section
+        &-subheading {
+            font-size: 22px;
+            @include positionRelatively(-32px, 271px);
+            font-family: $font-family;
+        }
+
+
+    }
+
+    // style for the image in this section
+    #{&}-image-div {
+        .actual-image {
+            @include resize(1410px, 890px);
+            @include positionRelatively(-262px, 450px);
+        }
+    }
+
+    // style for the form in this section
+    #{&}-form {
+        &-links {
+            @include positionRelatively(-591px, 44px);
+            font-size: 28px;
+
+            &-a {
+                text-decoration: none;
+                color: #303030;
+                padding-left: 27px;
+                padding-right: 27px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-family: $font-family;
+
+
+                &:hover {
+                    @include borderCreator($hover-color-lightblue, 50px, $hover-color-lightblue);
+                    @include transitionHoverColor(0.4s);
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        // style for the fieldset which is a part of the main form
+        &-div {
+            .section-1-form-fieldset {
+                @include resize (1497px, 131px);
+                @include positionRelatively(-540px, 37px);
+                @include borderCreator(1px solid #ebebeb, 10px, fetchShadeOfBlue(""));
+
+                &-fields {
+                    display: flex;
+
+                    .label-divs {
+                        padding: 25px;
+                    }
+
+                    // style for the input fields placeholder
+                    input[type="text"]::placeholder {
+                        color: fetchShadeOfBlue(form-blue);
+                        font-size: 25px;
+                        font-family: $font-family;
+                        @include positionRelatively(-5px, null);
+                    }
+
+                    label {
+                        color: #8D9598;
+                    }
+
+                    .fields-city {
+                        @include resize(150px, 30px);
+                        font-weight: bold;
+                        display: block;
+                        font-size: 25px;
+                        border: none;
+                        padding: 20px;
+                        margin-left: -20px;
+                        margin-top: 8px;
+                    }
+
+                    // style for the form with input type="select"
+                    .form-select {
+                        border: none;
+                        font-weight: bold;
+                        color: fetchShadeOfBlue(form-blue);
+                        font-size: 25px;
+                        padding: 20px;
+                        display: block;
+                        margin-left: -25px;
+                        appearance: none;
+                        background-image: url("/images/arrows.png");
+                        background-repeat: no-repeat;
+                        background-position: 325px 22px;
+                    }
+
+                    .form-select-1 {
+                        @extend .form-select;
+                        background-image: url("/images/arrows.png");
+                        background-repeat: no-repeat;
+                        background-position: 280px 22px;
+                    }
+
+                    // style for the submit button
+                    .sumbit-button {
+                        @extend .light-blue-button;
+                        @include resize(220px, 71px);
+                        @include positionRelatively(33px, 112px);
+
+                        &:hover {
+                            @include transitionHoverColor(0.2s);
+                            background-color: fetchShadeOfBlue(dark-blue);
+                            cursor: pointer;
+                        }
+                    }
+
+                    // style for the advanced filter button
+                    .advanced-filter-link {
+                        @include resize(200px, 18px);
+                        @include positionRelatively(58px, 91px);
+                        color: fetchShadeOfBlue(form-blue);
+                        border: none;
+                        background-color: transparent;
+                        font-size: 19px;
+
+                        &:hover {
+                            @include transitionHoverColor(0.2s);
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+footer {
+    // footer background color
+    background-color: fetchShadeOfBlue(navy-blue);
+
+    .footer {
+        @include gridCreation(1.3fr 1fr 1fr 1fr, null, minmax(100px, auto));
+        @include resize(null, 405px);
+        align-items: center;
+
+        // alignment of the footer logo
+        .footer-logo {
+            @include positionRelatively(26px, null);
+            justify-self: right;
+
+            // alignment of the footer text
+            &-text {
+                @include resize(247px, 43px);
+                color: fetchShadeOfBlue("");
+                font-size: 14px;
+                line-height: 30px;
+                padding-top: 10px;
+                font-family: $font-family;
+            }
+        }
+
+        // social media buttons
+        .social-media {
+            @include positionRelatively(-18 px, -28px);
+            grid-row: 2 / 3;
+            justify-self: right;
+
+            &-button {
+                padding: 5px;
+            }
+        }
+
+        // loop to adjust the width of the helpful links
+        @for $linkNum from 1 to 3 {
+            .links-containter-#{$linkNum} {
+                @if $linkNum==1 {
+                    @include positionRelatively(52px, 87px);
+                }
+
+                @else {
+                    @include positionRelatively(77px, 87px - 196px);
+                }
+
+                justify-self: center;
+                align-self: center;
+
+                // style the link header
+                .links-header {
+                    color: fetchShadeOfBlue("");
+                    font-size: 18px;
+                    font-family: $font-family;
+                }
+
+                // style the anchor links
+                .links-actual {
+                    text-decoration: none;
+                    color: fetchShadeOfBlue("");
+                    line-height: 50px;
+                    font-family: $font-family;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    // coyright section of the footer
+    .copyright {
+        @include resize(null, 74px);
+        background-color: #0B2F50;
+
+        // copyright text
+        &-text {
+            @include positionRelatively(31px, 317px);
+            font-size: 14px;
+            color: fetchShadeOfBlue("");
+            font-family: $font-family;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+// section specific style
+.section-3 {
+    margin-top: 137px;
+    height: 699px;
+
+    // style for the section header
+    &-header-heading {
+        text-align: center;
+        font-size: 48px;
+        color: fetchShadeOfBlue(navy-blue);
+    }
+
+    // style for the section subheading
+    &-header-subheading {
+        margin-top: 38px;
+        text-align: center;
+        font-size: 24px;
+        color: #8D9598;
+        font-family: $font-family;
+    }
+
+    // style for the images in the section
+    &-media {
+        @include gridCreation(450px 450px 450px, null, null);
+        @include positionRelatively(15px, 253px);
+        justify-items: center;
+        text-align: center;
+
+        &-image {
+            @include resize(401px, 468px);
+            @include borderCreator(1px solid transparent, 30px, null);
+            padding: 40px;
+        }
+    }
+
+    // style for the svg element in this section
+    .svg-element {
+        @include positionRelatively(47px, null);
+        text-align: center;
+    }
+}

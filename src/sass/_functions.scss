@@ -1,0 +1,26 @@
+// function that returns the intended shade of blue
+@function fetchShadeOfBlue($shade) {
+    @if ($shade=="light-blue") {
+        @return map-get($shades-of-blue, light-blue);
+    }
+
+    @else if ($shade=="dark-blue") {
+        @return map-get($shades-of-blue, dark-blue);
+    }
+
+    @else if ($shade=="form-blue") {
+        @return map-get($shades-of-blue, form-blue);
+    }
+
+    @else if ($shade=="very-dark-blue") {
+        @return map-get($shades-of-blue, very-dark-blue);
+    }
+
+    @else if ($shade=="navy-blue") {
+        @return map-get($shades-of-blue, navy-blue);
+    }
+
+    @else if ($shade == ""){
+        @return #FFFFFF;
+    }
+}

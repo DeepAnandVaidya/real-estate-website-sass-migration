@@ -1,0 +1,7 @@
+# Files to be ignored when using git
+
+node_modules/
+npm-debug.log
+*.log
+dist/
+/.env
